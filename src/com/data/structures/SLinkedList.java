@@ -43,9 +43,21 @@ public class SLinkedList {
 	//find the duplicates in the Linked list
 	public void findDupes(){
 		Node current = head;
-		while(current !=null && current.next != null){
+		Node current2 = head;
+
+		System.out.println("length of the LL:"+length);
+		int a=current.getItem();
+		int b=current2.getNext().getItem();
 			
-		}
+				while(a==b){
+				System.out.println("Dupe found");
+				System.out.println(current.getItem()+","+current2.getNext().getItem());
+				current2= current2.getNext();
+				}
+				current = current.getNext();
+			
+			
+		
 		
 	}
 	public static void main(String[] args){
