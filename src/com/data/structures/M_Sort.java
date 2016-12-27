@@ -16,7 +16,9 @@ public class M_Sort {
 		}
 	}
 	public static void merge(int[] a, int low, int mid, int high){
-		
+		int left = low;
+		int right = mid+1;
+		int k = 0;
 	}
 	public static void main(String[] args){
 		int[] a = {12, 34};
