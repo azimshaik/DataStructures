@@ -8,6 +8,8 @@ public class M_Sort {
 	public static void merge_sort(int[] a, int low, int high){
 		if(low>=high){//edge condition
 			return;
+		}else{
+			int mid = low/2 + high/2; //extra check(low+high)/2 will only work if the sum (low+high) fall under integer range
 		}
 	}
 	public static void main(String[] args){
