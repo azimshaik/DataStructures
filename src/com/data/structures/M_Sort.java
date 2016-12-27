@@ -31,7 +31,14 @@ public class M_Sort {
 			k++;
 		}//element(s) copied into temp array
 		
-		//
+		//copy leftover elements into temp, they mush be greater than the elements in temp
+		if(left<=mid){
+			while(left<=mid){
+				temp[k] = a[left];
+				left++;
+				k++;
+			}
+		}
 	}
 	public static void main(String[] args){
 		int[] a = {12, 34};
