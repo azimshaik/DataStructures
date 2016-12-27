@@ -16,9 +16,22 @@ public class M_Sort {
 		}
 	}
 	public static void merge(int[] a, int low, int mid, int high){
+		int[] temp = new int[high-low+1];
 		int left = low;
 		int right = mid+1;
-		int k = 0;
+		int k = 0;// index for temp array
+		while(left<=mid && right<=high){//checks theedge condition while merging
+			if(a[left]<a[right]){
+				temp[k] = a[left];
+				left++;
+			}else{
+				temp[k] = a[right];
+				right++;
+			}
+			k++;
+		}//element(s) copied into temp array
+		
+		//
 	}
 	public static void main(String[] args){
 		int[] a = {12, 34};
