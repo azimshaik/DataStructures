@@ -38,6 +38,12 @@ public class M_Sort {
 				left++;
 				k++;
 			}
+		}else if(right<=high){
+			while(right<=high){
+				temp[k] = a[right];
+				right++;
+				k++;
+			}
 		}
 	}
 	public static void main(String[] args){
