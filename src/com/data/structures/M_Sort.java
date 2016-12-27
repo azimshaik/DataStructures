@@ -34,17 +34,17 @@ public class M_Sort {
 		//copy leftover elements into temp, they mush be greater than the elements in temp
 		if(left<=mid){
 			while(left<=mid){
-				temp[k] = a[left];
+				temp[k] = a[left];//copy leftovers from left sub array (if any) into temp
 				left++;
 				k++;
 			}
 		}else if(right<=high){
 			while(right<=high){
-				temp[k] = a[right];
+				temp[k] = a[right];//copy leftovers from right sub array (if any) into temp
 				right++;
 				k++;
 			}
-		}
+		}//at this point after all the iterations the temp should have all the elements sorted.
 	}
 	public static void main(String[] args){
 		int[] a = {12, 34};
