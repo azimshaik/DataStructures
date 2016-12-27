@@ -45,6 +45,9 @@ public class M_Sort {
 				k++;
 			}
 		}//at this point after all the iterations the temp should have all the elements sorted.
+		for(int m=0; m<temp.length; m++){
+			a[low+m] = temp[m];// Note: &&&***IMPORTANT***&&& a[low+m] coz new insertions will have to happend after most recent insertion in earlier iteration 
+		}
 	}
 	public static void main(String[] args){
 		int[] a = {12, 34};
