@@ -1,5 +1,5 @@
 package com.data.structures;
-
+//http://www.mycstutorials.com/articles/data_structures/linkedlists
 public class SLinkedList {
 	public Node head;
 	public Node tail= null;

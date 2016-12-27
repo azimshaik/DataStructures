@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<script>
+
+function mergeSort(input) {
+
+  // just a single lonely item
+
+  if (input.length < 2) {
+
+    return input;
+
+  }
+
+  // divide
+
+  var mid = Math.ceil(input.length / 2);
+
+  console.log('before left'+ 'mid:'+mid);
+
+  var left = mergeSort(input.slice(0, mid));
+
+  console.log('before right'+ 'mid:'+mid);
+
+  var right = mergeSort(input.slice(mid));
+
+  // recursively sort and merge
+
+  console.log('Merge call');
+
+  console.log('left is: '+left+ ' Right is:'+right);
+
+  return merge(left, right);
+
+}
+
+function merge(left, right) {
+
+  var result = [];
+
+  // order the sublist as part of merging
+
+  while (left.length > 0 && right.length > 0) {
+
+    if (left[0] <= right[0]) {
+
+      result.push(left.shift());
+
+                  console.log(result);
+
+    } else {
+
+      result.push(right.shift());
+
+                  console.log(result);
+
+    }
+
+  }
+
+  // add the remaining items to the result
+
+  while (left.length > 0) {
+
+    result.push(left.shift());
+
+                console.log(result);
+
+  }
+
+  while (right.length > 0) {
+
+    result.push(right.shift());
+
+                console.log(result);
+
+  }
+
+  // the sorted sublist
+
+  return result;
+
+  console.log(result);
+
+}
+
+ 
+
+var example = [4, 10, 11, 20, 5, 3, 4, 1, -20];
+
+console.log(example);
+
+var result = mergeSort(example);
+
+console.log(result);
+
+//alert(example);
+
+</script>
+
+</body>
+
+</html>
+
