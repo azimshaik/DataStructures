@@ -10,6 +10,8 @@ public class M_Sort {
 			return;
 		}else{
 			int mid = low/2 + high/2; //extra check(low+high)/2 will only work if the sum (low+high) fall under integer range
+			merge_sort(a,low,mid);
+			merge_sort(a,mid+1,high);
 		}
 	}
 	public static void main(String[] args){
