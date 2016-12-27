@@ -15,6 +15,9 @@ public class M_Sort {
 			merge(a,low,mid,high);
 		}
 	}
+	public static void merge(int[] a, int low, int mid, int high){
+		
+	}
 	public static void main(String[] args){
 		int[] a = {12, 34};
 		merge_sort(a);
