@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 
 public class hourglass {
-	
-	public static void hourglasssum(int[][] A,int indexi, int indexj){
+	public static void hourglasssum(int[][] A,int indexi, int indexj,int maxSum){
 		int sum=0;
 		int flag=0;
 		for(int i=indexi;i<indexi+3;i++){
@@ -17,15 +16,17 @@ public class hourglass {
 				flag++;
 			}
 		}
-		
-		System.out.println("Sum:"+sum);	
-		
+		if(sum>maxSum){
+			maxSum = sum;
+		}
+		System.out.println("Sum:"+sum);
 	}
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
 		int N =6;
 		int M =6;
+		int maxSum=0;
 		int[][] A = new int[M][N];
 		for(int i=0;i<M;i++){
 			for(int j=0;j<N;j++){
@@ -40,7 +41,7 @@ public class hourglass {
 		}
 		for(int i=0;i<M-2;i++){
 			for(int j=0;j<N-2;j++){
-				hourglasssum(A,i,j);
+				hourglasssum(A,i,j,maxSum);
 			}
 		}
 		
