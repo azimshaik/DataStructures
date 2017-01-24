@@ -22,6 +22,7 @@ public class hourglass {
 			System.out.print("\n");
 		}
 		
+		//hourglass sum logic working only for first 3x3 matrix :(
 		int sum=0;
 		int flag=0;
 		for(int i=0;i<3;i++){
