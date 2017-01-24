@@ -9,15 +9,12 @@ public class hourglass {
 	public static void hourglasssum(int[][] A,int indexi, int indexj){
 		int sum=0;
 		int flag=0;
-		for(int i=indexi;i<3;i++){
-			for (int j=indexj;j<3;j++){	
+		for(int i=indexi;i<indexi+3;i++){
+			for (int j=indexj;j<indexj+3;j++){	
 				if(!(flag==3|flag==5)){
 				sum = sum+A[i][j];
-				//System.out.println(flag);
-				flag++;
-				}else{
-					flag++;
 				}
+				flag++;
 			}
 		}
 		
