@@ -41,6 +41,7 @@ public class hourglass {
 			
 	}
 }
+//
 //i=>1 to 3, 2 to 4, 3 to 5, 4 to 6
 //j=>1 to 3, 2 to 4, 3 to 5, 4 to 6
 //00 01 02 03
