@@ -3,7 +3,27 @@ package com.data.structures;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class hourglass {
+	
+	public static void hourglasssum(int[][] A){
+		int sum=0;
+		int flag=0;
+		for(int i=0;i<3;i++){
+			for (int j=0;j<3;j++){	
+				if(!(flag==3|flag==5)){
+				sum = sum+A[i][j];
+				//System.out.println(flag);
+				flag++;
+				}else{
+					flag++;
+				}
+			}
+		}
+		
+		System.out.println("Sum:"+sum);	
+		
+	}
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
@@ -22,24 +42,12 @@ public class hourglass {
 			System.out.print("\n");
 		}
 		
+		hourglasssum(A);
 		//hourglass sum logic working only for first 3x3 matrix :(
-		int sum=0;
-		int flag=0;
-		for(int i=0;i<3;i++){
-			for (int j=0;j<3;j++){	
-				if(!(flag==3|flag==5)){
-				sum = sum+A[i][j];
-				//System.out.println(flag);
-				flag++;
-				}else{
-					flag++;
-				}
-			}
-		}
 		
-		System.out.println("Sum:"+sum);	
-			
+		
 	}
+	
 }
 //
 //i=>1 to 3, 2 to 4, 3 to 5, 4 to 6
