@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 public class hourglass {
 	
-	public static void hourglasssum(int[][] A){
+	public static void hourglasssum(int[][] A,int indexi, int indexj){
 		int sum=0;
 		int flag=0;
-		for(int i=0;i<3;i++){
-			for (int j=0;j<3;j++){	
+		for(int i=indexi;i<3;i++){
+			for (int j=indexj;j<3;j++){	
 				if(!(flag==3|flag==5)){
 				sum = sum+A[i][j];
 				//System.out.println(flag);
@@ -41,8 +41,12 @@ public class hourglass {
 			}
 			System.out.print("\n");
 		}
+		for(int i=0;i<M-2;i++){
+			for(int j=0;i<N-2;j++){
+				hourglasssum(A,i,j);
+			}
+		}
 		
-		hourglasssum(A);
 		//hourglass sum logic working only for first 3x3 matrix :(
 		
 		
