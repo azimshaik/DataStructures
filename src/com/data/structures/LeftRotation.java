@@ -12,12 +12,12 @@ public class LeftRotation {
 			A[i] = sc.nextInt();
 		}
 		for(int i=0;i<n;i++){
-			System.out.print(A[i]+" ");
+			//System.out.print(A[i]+" ");
 		}
 		for(int i=0;i<d;i++){
 			int m =n;
 			int j =i;
-			int temp = A[i];
+			int temp = A[j-i];
 			while(m>1){
 				A[j-i] = A[j-i+1];
 				j++;
@@ -26,6 +26,6 @@ public class LeftRotation {
 			A[n-1] = temp;
 		}
 		for(int i=0;i<n;i++)
-			System.out.println(A[i]+" ");
+			System.out.print(A[i]+" ");
 	}
 }
