@@ -18,9 +18,9 @@ public class SparseArrays {
 		//Queries
 		int q = sc.nextInt();
 		String[] Q = new String[q];
-//		for(int i =0; i<q ; i++){
-//			Q[i] = sc.next();
-//		}
+		for(int i =0; i<q ; i++){
+			Q[i] = sc.next();
+		}
 		
 		for(int i=0;i<q;i++){
 			int count =0;
