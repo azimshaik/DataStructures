@@ -30,7 +30,7 @@ public class SparseArrays {
 				//Q[i] == A[j]
 				//Q[i].toString() == A[j].toString()
 				//Arrays.equals(Q[i].toCharArray(), A[j].toCharArray())
-				if(Arrays.equals(Q[i].toCharArray(), A[j].toCharArray())){
+				if(Q[i].equals(A[j])){
 					//System.out.println(Q[i]+" "+A[j]);
 					count++;
 				}
