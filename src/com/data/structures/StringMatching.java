@@ -10,5 +10,16 @@ public class StringMatching {
 		System.out.println(s_len+" "+ss_len);
 		//helloworldjava
 		//world
+		for(int i=0;i<ss_len;i++){
+			int count =0;
+			int k = i;
+			for(int j=0;j<s_len-ss_len+1;j++){
+				if(ss.toCharArray()[k]==s.toCharArray()[j] & count<ss_len){
+					System.out.println(ss.toCharArray()[k]+" "+s.toCharArray()[j]);
+					count++;
+					k++;
+				}
+			}
+		}
 	}
 }
