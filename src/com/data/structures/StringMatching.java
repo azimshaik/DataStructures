@@ -11,21 +11,18 @@ public class StringMatching {
 		System.out.println(s_len+" "+ss_len);
 		//helloworldjavaworld
 		//world
-		for(int j=0;j<s_len-ss_len+1;j++){
-			int count =0;
-			int k = j;
-			for(int i=0;i<ss_len;i++ ){
-				if(ss.toCharArray()[i+j]==s.toCharArray()[j]){
-					System.out.println(ss.toCharArray()[k-i]+" "+s.toCharArray()[j]);
-					if(count==ss_len-1){
-						System.out.println(j-count);
-						//i=0;
-						//break;
-					}
-					count++;
-					k++;
+		for(int i=0; i<ss_len;i++){
+			for(int j=0;j<s_len-ss_len;j++){
+				if(ss.toCharArray()[i] == s.toCharArray()[j]){
+					i++;
 				}
 			}
 		}
 	}
 }
+//world
+//helloworldjavaworld
+//0 0,0 1,0 2, 0 3, 0 4, 0 5-true
+//
+
+
